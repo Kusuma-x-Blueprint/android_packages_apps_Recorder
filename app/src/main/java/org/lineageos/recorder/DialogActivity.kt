@@ -66,14 +66,8 @@ class DialogActivity : AppCompatActivity() {
 
     override fun finish() {
         super.finish()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            overrideActivityTransition(
-                OVERRIDE_TRANSITION_CLOSE, 0, android.R.anim.fade_out, Color.TRANSPARENT
-            )
-        } else {
-            @Suppress("deprecation")
-            overridePendingTransition(0, android.R.anim.fade_out)
-        }
+        @Suppress("deprecation")
+        overridePendingTransition(0, android.R.anim.fade_out)
     }
 
     private fun setupLocationSwitch(
