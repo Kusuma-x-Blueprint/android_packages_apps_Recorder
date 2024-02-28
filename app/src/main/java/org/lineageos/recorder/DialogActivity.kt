@@ -10,15 +10,15 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SwitchCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.materialswitch.MaterialSwitch
 import org.lineageos.recorder.utils.PermissionManager
 import org.lineageos.recorder.utils.PreferencesManager
 
 class DialogActivity : AppCompatActivity() {
     // Views
-    private lateinit var highQualitySwitch: MaterialSwitch
-    private lateinit var locationSwitch: MaterialSwitch
+    private lateinit var highQualitySwitch: SwitchCompat
+    private lateinit var locationSwitch: SwitchCompat
 
     private val permissionManager: PermissionManager by lazy { PermissionManager(this) }
 
@@ -71,7 +71,7 @@ class DialogActivity : AppCompatActivity() {
     }
 
     private fun setupLocationSwitch(
-        locationSwitch: MaterialSwitch,
+        locationSwitch: SwitchCompat,
         isRecording: Boolean
     ) {
         val tagWithLocation = if (preferences.tagWithLocation) {
@@ -104,7 +104,7 @@ class DialogActivity : AppCompatActivity() {
     }
 
     private fun setupHighQualitySwitch(
-        highQualitySwitch: MaterialSwitch,
+        highQualitySwitch: SwitchCompat,
         isRecording: Boolean
     ) {
         val highQuality = preferences.recordInHighQuality

@@ -9,16 +9,22 @@
     android:padding="?dialogPreferredPadding"
     android:orientation="vertical">
 
-    <com.google.android.material.materialswitch.MaterialSwitch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/locationSwitch"
+        style="@style/AppTheme.Switch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minWidth="@dimen/touch_target_min_size"
+        android:minHeight="@dimen/touch_target_min_size"
         android:text="@string/settings_location_message" />
 
-    <com.google.android.material.materialswitch.MaterialSwitch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/highQualitySwitch"
+        style="@style/AppTheme.Switch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minWidth="@dimen/touch_target_min_size"
+        android:minHeight="@dimen/touch_target_min_size"
         android:text="@string/settings_quality_high" />
 
 </LinearLayout>

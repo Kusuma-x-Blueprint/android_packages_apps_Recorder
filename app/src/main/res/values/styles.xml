@@ -14,6 +14,7 @@
     </style>
 
     <style name="AppTheme.DialogActivity">
+        <item name="android:switchStyle">@style/AppTheme.Switch</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
@@ -51,5 +52,14 @@
     <style name="AppTheme.MenuItem">
         <item name="android:iconTint">?attr/colorOnSurface</item>
         <item name="iconTint">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="AppTheme.Switch" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:switchMinWidth">52dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:track">@drawable/settingslib_switch_track</item>
+        <item name="android:thumb">@drawable/settingslib_switch_thumb</item>
+        <item name="track">@drawable/settingslib_switch_track</item>
+        <item name="thumbTint">@drawable/settingslib_switch_thumb</item>
     </style>
 </resources>
