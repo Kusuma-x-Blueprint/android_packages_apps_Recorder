@@ -81,6 +81,10 @@ configure<GenerateBpPluginExtension> {
     targetSdk.set(android.defaultConfig.targetSdk!!)
     availableInAOSP.set { module: Module ->
         when {
+            module.group.startsWith("androidx") -> {
+                // We provide our own androidx.appcompat
+                !module.group.startsWith("androidx.appcompat")
+            }
             module.group.startsWith("androidx") -> true
             module.group.startsWith("org.jetbrains") -> true
             module.group == "com.google.errorprone" -> true
